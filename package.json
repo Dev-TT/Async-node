@@ -1,0 +1,29 @@
+{
+  "name": "async-node",
+  "version": "1.0.0",
+  "description": "Tests of different ways to run asnyc codes in Node",
+  "main": "callbacks.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-TT/Async-node.git"
+  },
+  "keywords": [
+    "async",
+    "callbacks",
+    "observables",
+    "promises",
+    "await"
+  ],
+  "author": "Juan Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dev-TT/Async-node/issues"
+  },
+  "homepage": "https://github.com/Dev-TT/Async-node#readme",
+  "dependencies": {
+    "rxjs": "^7.3.0"
+  }
+}

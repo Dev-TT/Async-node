@@ -15,26 +15,24 @@ const getEnvironment = callback=>{
 };
 
 const getUser = whattodonext =>{            //whattodonext is the Callback (a parameter to be received)
+    console.log('this runs before first!');
+    
     setTimeout(() => {
-        console.log('this runs first!');
-        getEnvironment(environment =>{
-            whattodonext('User is Juan with: /'+ environment);
-        });
+        console.log('this runs after the 1sx!');
+        whattodonext('Result: User is Juan');
     }, 1000);
 };
 
-
-getUser(user =>{                            //ENTRY POINT
-    console.log('this runs last');          // This is the callback definition
+getUser(user =>{
+    console.log('after user is received');
     console.log(user);
+    
+    getEnvironment(env=>{
+        console.log('after environment is finished');
+        console.log(env);
+        
+    });
 });
-
-
-
-// executes getUser()
-// does everything inside getUser
-// then GetUser executes the Callback function whattodonext, 
-// which is defined in the below code
 
 
 
