@@ -11,7 +11,7 @@ node promises.js
 
 node promises-linked.js
 
-## observables
+## Observables
 node observables.mjs (not finished)
 
 
