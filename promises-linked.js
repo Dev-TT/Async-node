@@ -6,16 +6,27 @@ setTimeout(() => {
 
 console.log(1); 
 
+const getEnvironment= () =>{
+    return new Promise(resolve =>{
+            setTimeout(() => {
+                resolve('Environment is cool');
+            }, 2000);
+        }
+    );
+}
+
 const getUser = (env) =>{    
     return new Promise(resolve =>{
         setTimeout(() => {
             console.log('this runs first!');
-            resolve('User is Juan.');            //You could also call reject(err) to throw an error
+            resolve('User is Juan. Env: '+env);            //You could also call reject(err) to throw an error
         }, 1000);
     });
 };
 
-getUser().then(user => {
+getEnvironment().then(env=>{
+    return getUser(env)
+}).then(user => {
     console.log(user);
 }).catch(error => {
     // error handler
